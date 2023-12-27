@@ -1,0 +1,203 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 120,
+            "Height": 160,
+            "Color": {
+              "Red": 2,
+              "Green": 204,
+              "Blue": 9
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "X": 120,
+            "Width": 120,
+            "Height": 160,
+            "Color": {
+              "Red": 2,
+              "Green": 204,
+              "Blue": 9
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box3",
+            "Y": 160,
+            "Width": 120,
+            "Height": 160,
+            "Color": {
+              "Red": 2,
+              "Green": 204,
+              "Blue": 9
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "box4",
+            "X": 120,
+            "Y": 160,
+            "Width": 120,
+            "Height": 160,
+            "Color": {
+              "Red": 2,
+              "Green": 204,
+              "Blue": 9
+            }
+          },
+          {
+            "Type": "Button",
+            "Name": "door_lock_1",
+            "X": -15,
+            "Y": 20,
+            "Width": 150,
+            "Height": 121,
+            "Pressed": "door.png",
+            "Released": "door.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "door_lock_2",
+            "X": 105,
+            "Y": 20,
+            "Width": 150,
+            "Height": 121,
+            "Pressed": "door.png",
+            "Released": "door.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "door_lock_3",
+            "X": -15,
+            "Y": 180,
+            "Width": 150,
+            "Height": 121,
+            "Pressed": "door.png",
+            "Released": "door.png"
+          },
+          {
+            "Type": "Button",
+            "Name": "door_lock_4",
+            "X": 105,
+            "Y": 180,
+            "Width": 150,
+            "Height": 121,
+            "Pressed": "door.png",
+            "Released": "door.png"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "door1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "door_lock_1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "function1"
+            }
+          },
+          {
+            "InteractionName": "door2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "door_lock_2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "function2"
+            }
+          },
+          {
+            "InteractionName": "door3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "door_lock_3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "function3"
+            }
+          },
+          {
+            "InteractionName": "door4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "door_lock_4"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "function4"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "App",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommandOverride": "make -f ../gcc/Makefile -j8",
+    "FlashTargetCommandOverride": "make -f ../gcc/Makefile flash",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait",
+    "Family": "STM32F4",
+    "SubFamily": "STM32F429/439",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../App.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": [
+      "Vector"
+    ]
+  },
+  "Version": "4.22.1",
+  "CreatedBy": "4.22.1"
+}
